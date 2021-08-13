@@ -3,18 +3,18 @@ import './App.css';
 import React from 'react';
 
 class App extends React.Component {
-  constructor() {
-    super()
-    this.state = {
-      meanOfLife : 43
-    }
+
+  state = {
+    meanOfLife : 43
   }
-  
+
   handleClick = () => {
-    this.setState(
-      {meanOfLife: this.state.meanOfLife +1}
+    this.setState( 
+      { meanOfLife: this.state.meanOfLife + 1 }
+    ,
+      () => console.log(this.state.meanOfLife)  
     )
-    console.log(this.state);
+    
   }
 
   render() {  
