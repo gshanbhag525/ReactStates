@@ -9,12 +9,12 @@ class App extends React.Component {
   }
 
   handleClick = () => {
-    this.setState( 
-      { meanOfLife: this.state.meanOfLife + 1 }
+    this.setState( (prevState, prevProps) => {
+      return { meanOfLife: this.state.meanOfLife + 1 }
+    }
     ,
       () => console.log(this.state.meanOfLife)  
     )
-    
   }
 
   render() {  
