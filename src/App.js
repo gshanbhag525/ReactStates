@@ -10,7 +10,7 @@ class App extends React.Component {
 
   handleClick = () => {
     this.setState( (prevState, prevProps) => {
-      return { meanOfLife: prevState.meanOfLife + this.props.increment }
+      return { meanOfLife: prevState.meanOfLife + prevProps.increment }
     }
     ,
       () => console.log(this.state.meanOfLife)  
