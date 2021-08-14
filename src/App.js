@@ -3,11 +3,18 @@ import './App.css';
 import React from 'react';
 
 class App extends React.Component {
+  constructor(props) {
+    super(props)
+  
+    this.state = {
+      meanOfLife : 43
+    }
+    this.props = props
 
-  state = {
-    meanOfLife : 43
+  // to use props here u need to pass  it in super and constructor
+
   }
-
+  
   handleClick = () => {
     this.setState( (prevState, prevProps) => {
       return { meanOfLife: prevState.meanOfLife + prevProps.increment }
